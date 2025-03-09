@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from src.core.config import CORS_WHITELIST
 
 app = FastAPI(
     title="GitHub Stats API Service",
@@ -8,8 +9,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    # TODO: take it from env
-    allow_origins=["*"],
+    allow_origins=CORS_WHITELIST,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
