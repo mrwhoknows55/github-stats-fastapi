@@ -27,5 +27,12 @@ Run the FastAPI application using uvicorn:
 uvicorn src.main:app --reload
 ```
 
+or using Docker compose:
+
+```bash
+docker compose up
+```
+
+
 The API will be available at http://localhost:8000
 The swagger documentation at http://localhost:8000/docs
